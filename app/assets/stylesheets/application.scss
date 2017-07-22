@@ -1,0 +1,83 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+body{
+  background-color: black;
+}
+
+@font-face {
+    font-family: 'comics';
+    src: url('comics.ttf') format('truetype');
+}
+.active{
+  background-color: #e7e7e7;
+}
+
+
+#nav{
+  position: absolute;
+  font-family: 'comics';
+  font-size: 20px;
+  background: #0C7FC4;
+  width: 100%;
+  border-bottom: solid 10px white;
+  z-index: 2;
+}
+
+#cover{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 926px;
+  background-image: url('tacoma.jpg');
+}
+
+.heading{
+  text-shadow:
+   8px  8px     #fff,
+  -1px  1px     #fff,
+   1px -1px     #fff,
+  -1px -1px     #fff,
+   1px  1px 5px #555;
+  top: 250px;
+  padding-left: 100px;
+  position: absolute;
+  font-size: 180px;
+  color: #0C7FC4;
+  font-family: 'comics';
+  z-index: 2;
+}
+
+.heading > #heading2{
+  position: inherit;
+  font-size: 70px;
+  color: #0C7FC4;
+  font-family: 'comics';
+  z-index: 2;
+  text-shadow:
+   8px  8px     #fff,
+  -1px  1px     #fff,
+   1px -1px     #fff,
+  -1px -1px     #fff,
+   1px  1px 5px #555;
+}
+
+
+.subscribe{
+  font-family: 'comics';
+  background-color: white;
+  height: 400px;
+
+  padding-top: 80px;
+}
+
+
+
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
