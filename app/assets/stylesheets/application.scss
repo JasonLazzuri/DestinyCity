@@ -5,6 +5,8 @@
 
 body{
   background-color: black;
+  min-width: 1000px;
+
 }
 
 @font-face {
@@ -29,7 +31,9 @@ body{
 #cover{
   background-size: cover;
   background-repeat: no-repeat;
-  height: 926px;
+  background-position: 0% -62px;
+  top: 0px;
+  height: 800px;
   background-image: url('tacoma.jpg');
 }
 
@@ -67,17 +71,17 @@ body{
 .subscribe{
   font-family: 'comics';
   background-color: white;
-  height: 400px;
-
+  min-height: 400px;
   padding-top: 80px;
 }
-
-
-
 
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.what{
+  width: 300px;
 }
