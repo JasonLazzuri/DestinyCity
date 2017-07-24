@@ -21,9 +21,9 @@
   </div>
 </div>
 
-<div id="superman">
-  <h1>Check out What everyone is saying about Destiny City</h1>
-  <div id="wpac-google-review"> <% binding.pry %> </div>
+<div id="superman" class="parallax1">
+  <h1 style="font-size:80px; color:#0C7FC4;">Check out What everyone is saying about Destiny City</h1>
+  <div id="wpac-google-review">
     <script type="text/javascript">
     wpac_init = window.wpac_init || [];
     wpac_init.push({widget: 'GoogleReview', id: 6343, place_id: 'ChIJNd15h6hVkFQRlrjawk0St4g', view_mode: 'list'});
@@ -58,3 +58,139 @@
       <%= image_tag ('vertigo'), :class => 'vertigo'  %>
   </div>
 </div>
+
+<div id="events">
+  <div class="container">
+    <h1 style="text-align:center;font-size:100px;">Upcoming Events</h1>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <%= image_tag ('metal'), :class => 'image' %>
+        <h2 style="font-family:helvetica;">Dark Nights METAL #1 Midnight Release Party</h2>
+        <h4>August 15 @ 11:30 pm - August 16 @ 1:00 am</h4>
+        <hr>
+        <%= image_tag ('kirby'), :class => 'image' %>
+        <h2 style="font-family:helvetica;">Kirby Krackle concert on Jack Kirby’s 100th Birthday!</h2>
+        <h4>August 26</h4>
+        <hr>
+        <%= image_tag ('symposium'), :class => 'image' %>
+        <h2 style="font-family:helvetica;">Destiny City Zine Symposium August</h2>
+        <h4>August 26 @ 2:00 pm - 6:00 pm</h4>
+        <hr>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+<div id="map"></div>
+    <script>
+     var marker;
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: {lat: 47.262419, lng: -122.445784},
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+
+
+        marker = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 47.262419, lng: -122.445784}
+        });
+        marker.addListener('click', toggleBounce);
+
+
+      function toggleBounce() {
+              if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+              } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+              }
+            }
+          }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBN8m4iJ3LtZhl97zm5MjlDrOH_0RuGxE&callback=initMap"
+    async defer></script>
