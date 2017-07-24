@@ -1,4 +1,4 @@
-<section class="parallax row" id="cover">
+<section class="parallax1 row" id="cover">
   <div class="col-lg-12">
     <h1 class="heading parallax">Destiny City Comics!<br><span id="heading2">Stadium Districts Comic Shop</span></h1>
   </div>
@@ -6,7 +6,7 @@
 
 <div class="subscribe row">
   <div class="container">
-    <div class="col-md-4">
+    <div class="col-md-4 love-comics">
       <h1>Love Comic Books?</h1>
       <h3>save money by subscibing to your favorite titles</h3>
       <h1>Find Out More Here</h1>
@@ -14,9 +14,47 @@
     <div class="col-md-4"><%= image_tag ('what'), :class => "what" %></div>
     <div class="col-md-4">
       <h1>Sign up for Our Newsletter</h1>
+
       <input type="email" class="form-control" placeholder="email">
-      <br>
       <button type="button" class="btn btn-lg btn-primary">Submit</button>
     </div>
+  </div>
+</div>
+
+<div id="superman">
+  <h1>Check out What everyone is saying about Destiny City</h1>
+  <div id="wpac-google-review"> <% binding.pry %> </div>
+    <script type="text/javascript">
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({widget: 'GoogleReview', id: 6343, place_id: 'ChIJNd15h6hVkFQRlrjawk0St4g', view_mode: 'list'});
+    (function() {
+        if ('WIDGETPACK_LOADED' in window) return;
+        WIDGETPACK_LOADED = true;
+        var mc = document.createElement('script');
+        mc.type = 'text/javascript';
+        mc.async = true;
+        mc.src = 'https://embed.widgetpack.com/widget.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+    </script>
+    <!-- <h1 style="text-align:center; font-size: 80px; color: #0C7FC4;">Come To Destiny City Comics</h1>
+      <p style="font-size: 50px;color: #0C7FC4;">for traditional comics, critically-acclaimed graphic novels, independent comix, and works by local artists. </p> -->
+</div>
+
+<div class="subscribe row">
+    <div class="col-md-2">
+      <%= image_tag ('marvel'), :class => 'marvel'  %>
+    </div>
+    <div class="col-md-2">
+      <%= image_tag ('image'), :class => 'image'  %>
+    </div>
+    <div class="col-md-3">
+      <%= image_tag ('dc'), :class => 'dc'  %>
+    </div>
+    <div class="col-md-2">
+      <%= image_tag ('darkhorse'), :class => 'darkhorse'  %>
+    </div>
+    <div class="col-md-2">
+      <%= image_tag ('vertigo'), :class => 'vertigo'  %>
   </div>
 </div>

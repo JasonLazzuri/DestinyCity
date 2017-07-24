@@ -1,12 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
 body{
   background-color: black;
   min-width: 1000px;
+}
 
+
+h1,h2,h3,h4,h5,p{
+  font-family: 'comics'
 }
 
 @font-face {
@@ -15,6 +17,10 @@ body{
 }
 .active{
   background-color: #e7e7e7;
+}
+
+.love-comics > h1{
+  font-size: 50px;
 }
 
 
@@ -44,7 +50,7 @@ body{
    1px -1px     #fff,
   -1px -1px     #fff,
    1px  1px 5px #555;
-  top: 250px;
+  top: 200px;
   padding-left: 100px;
   position: absolute;
   font-size: 180px;
@@ -67,15 +73,17 @@ body{
    1px  1px 5px #555;
 }
 
-
+// subscribe white section as well as the comic logo section
 .subscribe{
   font-family: 'comics';
   background-color: white;
   min-height: 400px;
+  min-width: 1000px;
   padding-top: 80px;
+  font-size: 50px;
 }
-
-.parallax {
+// end
+.parallax1 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,3 +93,46 @@ body{
 .what{
   width: 300px;
 }
+
+.logo{
+  padding-top: 30px;
+  width: 250px;
+}
+
+
+// michael superman
+#superman{
+  background-image: url('michael-superman');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+}
+
+
+
+
+
+// comic icon logo section
+.marvel{
+  position: relative;
+  top:90px;
+  left: 30px;
+  width: 200px;
+}
+.image{
+  position: relative;
+  padding: 30px;
+  width: 200px;
+}
+.dc{
+  left: 80px;
+  width: 200px;
+  margin: 50px;
+}
+.darkhorse{
+  width: 200px;
+  padding:40px;
+}
+// end
