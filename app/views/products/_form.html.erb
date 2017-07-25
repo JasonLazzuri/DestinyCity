@@ -1,37 +1,46 @@
-<%= form_with(model: product, local: true) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
-      <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <%= form_for [@product], url: products_path, html: { multipart: true } do |form| %>
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+          <% product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :product_title %>
-  </div>
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, :class => "form-control", id: :product_title %>
+      </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
-  </div>
+      <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, :class => "form-control", id: :product_description %>
+      </div>
 
-  <div class="field">
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity, id: :product_quantity %>
-  </div>
+      <div class="form-group">
+        <%= form.label :quantity %>
+        <%= form.number_field :quantity, :class => "form-control", id: :product_quantity %>
+      </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category, id: :product_category %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div class="form-group">
+        <%= form.select :category, options_for_select([['Select One', ''], 'independant', 'graphic novel','merchandise']), :class => "form-control"%>
+      </div>
+
+      <div class="control-group">
+        <%= form.label :images, class: 'control-label'  %>
+        <div class="controls">
+          <%= form.file_field :images, type: :file, multiple: true %>
+        </div>
+      </div>
+      <br>
+
+      <div class="actions">
+        <%= form.submit :class => "btn btn-primary" %>
+      </div>
+    <% end %>
