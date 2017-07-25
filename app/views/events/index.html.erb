@@ -2,8 +2,8 @@
     <div class="container">
 
     <p id="notice"><%= notice %></p>
-
-    <h1>Events</h1>
+<br><br>
+    <h1 style="text-align:center;">Events</h1>
 
 
 
@@ -11,7 +11,6 @@
     <% @events.each do |event| %>
           <%= image_tag event.images.url(:large) %>
       <h1><%= event.title %></h1>
-
       <h3> What?</h3>
       <%= event.content %>
       <h3>Where?</h3>
