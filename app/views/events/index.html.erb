@@ -23,22 +23,26 @@
       <hr>
       <div class="row">
         <div class="col-md-4">
-          <%= link_to 'Show', event, :class => "btn btn-primary btn-lg" %>
+          <%= link_to 'Event Page', event, :class => "btn btn-primary btn-lg" %>
         </div>
         <div class="col-md-4">
           <%= link_to 'Edit', edit_event_path(event), :class => "btn btn-primary btn-lg" %>
         </div>
         <div class="col-md-4">
           <%= link_to 'Destroy', event,:class => "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <hr>
+          <br>
+        </div>
         <hr>
-        <br>
-      </div>
-    <% end %>
-  </ul>
+        <% end %>
+        </div>
+      </ul>
 
     <br>
 
-    <%= link_to 'New Event', new_event_path %>
+    <%= link_to 'New Event', new_event_path, :class => "btn btn-primary btn-lg" %>
+    <br>
+    <br>
 
   </div>
 </div>

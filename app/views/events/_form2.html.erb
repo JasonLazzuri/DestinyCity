@@ -1,0 +1,42 @@
+
+<%= form_for [@event], url: event_path, html: { multipart: true } do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, :class => "form-control", id: :event_title %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.text_area :content, :class => "form-control", id: :event_content %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :location %>
+    <%= form.text_field :location, :class => "form-control", id: :event_location %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :date %>
+    <%= form.text_field :date, :class => "form-control", id: :event_date %>
+  </div>
+
+  <div class="form-group">
+    <%= form.file_field :images %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :class => "btn btn-primary" %>
+  </div>
+<% end %>
