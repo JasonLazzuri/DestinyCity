@@ -1,16 +1,5 @@
 
     <%= form_for [@product], url: products_path, html: { multipart: true } do |form| %>
-      <% if @product.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
-          <ul>
-          <% product.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
 
       <div class="form-group">
         <%= form.label :title %>
@@ -23,19 +12,17 @@
       </div>
 
       <div class="form-group">
-        <%= form.label :quantity %>
-        <%= form.number_field :quantity, :class => "form-control", id: :product_quantity %>
+        <%= form.label :price %>
+        <%= form.number_field :price, value: number_to_currency(form.object.price.to_f, delimiter: '', unit: ''), step: :any, :class => "form-control", id: :product_price %>
       </div>
-
 
       <div class="form-group">
         <%= form.select :category, options_for_select([['Select One', ''], 'independant', 'graphic novel','merchandise']), :class => "form-control"%>
       </div>
 
       <div class="control-group">
-        <%= form.label :images, class: 'control-label'  %>
         <div class="controls">
-          <%= form.file_field :images, type: :file, multiple: true %>
+          <%= form.file_field :image, type: :file, multiple: true %>
         </div>
       </div>
       <br>
@@ -43,4 +30,5 @@
       <div class="actions">
         <%= form.submit :class => "btn btn-primary" %>
       </div>
+
     <% end %>
