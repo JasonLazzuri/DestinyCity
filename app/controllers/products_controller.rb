@@ -14,6 +14,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @order = current_order
+    @order_items = current_order.order_items.new
     @product = Product.find(params[:id])
       respond_to do |format|
       format.html { redirect_to :show}
