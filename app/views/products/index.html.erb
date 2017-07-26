@@ -2,8 +2,9 @@
   <div class="container">
   <p id="notice"><%= notice %></p>
   <br><br><br>
+  <% if is_admin? %>
   <%= link_to 'New Product', new_product_path %>
-
+  <% end %>
   <h1 style="text-align:center;">Products</h1>
 
 <hr>
@@ -26,7 +27,7 @@
     	</div><!--/row-->
     </div><!--/container -->
     <div class="col-xs-18 col-sm-4 col-md-3" id="result">
-      
+
     </div>
 <br><br>
   </div>

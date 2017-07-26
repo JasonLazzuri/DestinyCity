@@ -20,6 +20,7 @@
       <br>
       <br>
       <hr>
+      <% if is_admin? %>
       <div class="row">
         <div class="col-md-4">
           <%= link_to 'Event Page', event, :class => "btn btn-primary btn-lg" %>
@@ -34,12 +35,14 @@
         </div>
         <hr>
         <% end %>
+        <% end %>
+        <% if is_admin? %>
+          <%= link_to 'New Event', new_event_path, :class => "btn btn-primary btn-lg" %>
+        <% end %>
         </div>
       </ul>
 
     <br>
-
-    <%= link_to 'New Event', new_event_path, :class => "btn btn-primary btn-lg" %>
     <br>
     <br>
 
