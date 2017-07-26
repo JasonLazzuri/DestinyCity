@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :events
   resource :cart, only: [:show]
 
+  resources :users, only: [:index]
+
 
   resources :orders do
   resources :order_items
