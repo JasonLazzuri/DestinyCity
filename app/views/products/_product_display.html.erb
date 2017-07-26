@@ -1,0 +1,28 @@
+<div class="events">
+  <div class="container">
+    <br><br><br><br><br>
+
+    <div class="title-bar">
+      <h1><%= @product.title %></h1>
+    </div>
+    <p id="notice"><%= notice %></p>
+
+    <%= image_tag @product.images[0].image.url(:large) %>
+
+      <h3>Description:</h3>
+      <%= @product.description %>
+
+
+      <h3>Price:</h3>
+      $<%= @product.price %>
+      <br><br>
+
+
+    <%= link_to 'Destroy', @product,:class => "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <%= link_to 'Edit', edit_product_path(@product),:class => "btn btn-primary btn-lg" %> |
+    <%= link_to 'Back', products_path,:class => "btn btn-primary btn-lg" %>
+    <br><br>
+
+  </div>
+</div>
