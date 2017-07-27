@@ -1,6 +1,5 @@
 <div class="events">
   <div class="container">
-    <br><br><br><br><br>
 
     <div class="title-bar">
       <h1><%= @product.title %></h1>
@@ -22,6 +21,7 @@
         <%= f.number_field :quantity %>
         <%= f.submit "Add to cart" %>
       <% end %>
+      <br><br>
 
       <% if is_admin? %>
         <%= link_to 'Destroy', @product,:class => "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?' } %>
