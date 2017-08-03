@@ -18,8 +18,8 @@
 
       <%= form_for @order_items, remote:true  do |f| %>
         <%= f.hidden_field :product_id, value: product.id %>
-        <%= f.number_field :quantity %>
-        <%= f.submit "Add to cart" %>
+        <%= f.number_field :quantity, min: '1'  %>
+        <%= f.submit "Add to cart", :class => 'btn btn-primary' %>
       <% end %>
       <br><br>
 
@@ -27,7 +27,6 @@
         <%= link_to 'Destroy', @product,:class => "btn btn-primary btn-lg", method: :delete, data: { confirm: 'Are you sure?' } %>
         <%= link_to 'Edit', edit_product_path(@product),:class => "btn btn-primary btn-lg" %>
       <% end %>
-    <%= link_to 'Back', products_path,:class => "btn btn-primary btn-lg" %>
     <br><br>
 
   </div>

@@ -19,14 +19,14 @@
           <% if is_admin? %>
             <li><%= link_to 'Admin', users_path %></li>
           <% end %>
+          <li><%= link_to "Home", root_path%></li>
+          <li><%= link_to "Store", products_path %></li>
+          <li><%= link_to "Events", events_path %></li>
 
           <% if current_user %>
             <li><%= link_to 'Cart', cart_path %></li>
             <li id="cart-amount"><h5 style="margin-top:17px;">$<%= current_order.total_price %></h5></li>
-
-            <li><%= link_to "Home", root_path%></li>
-            <li><%= link_to "Store", products_path %></li>
-            <li><%= link_to "Events", events_path %></li>
+            
             <li style="margin-top:11px;"><%= current_user.email %></li>
 
             <li><%= link_to 'Sign Out', destroy_user_session_path, :data => {:method=>'delete'} %></li>
