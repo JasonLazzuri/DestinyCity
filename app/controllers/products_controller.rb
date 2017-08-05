@@ -8,6 +8,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    if current_order.status == "Paid"
+      session[:order_id] = nil
+    end
     @products = Product.all
     @order_item = current_order.order_items.new
 

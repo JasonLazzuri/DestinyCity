@@ -1,29 +1,32 @@
 <div class="events">
-
-  <br><br><br>
-      <div class="title-bar">
-        <h1><%= @event.title %></h1>
-      </div>
   <div class="container">
+      <br>
+          <div class="title-bar">
+            <h1><%= @event.title %></h1>
+          </div>
+      <div class="container">
 
-    <p id="notice"><%= notice %></p>
+        <p id="notice"><%= notice %></p>
 
-      <%= image_tag @event.images.url(:large) %>
-      <h3><%= @event.title %></h3>
+          <%= image_tag @event.images.url(:large), :style => 'display:inline-block;' %>
+          <h3><%= @event.title %></h3>
 
-      <h3>What?</h3>
-      <%= @event.content %>
-
-
-      <h3>Where?</h3>
-      <%= @event.location %>
+          <h3>What?</h3>
+          <%= @event.content %>
 
 
-      <h3>When?</h3>
-      <%= @event.date %>
-<br><br>
-    <%= link_to 'Edit', edit_event_path(@event), :class => "btn btn-primary btn-lg", :style => "margin:10px;" %>
-    <%= link_to 'Back', events_path, :class => "btn btn-primary btn-lg" %>
-    </div>
-<br><br>
+          <h3>Where?</h3>
+          <%= @event.location %>
+
+
+          <h3>When?</h3>
+          <%= @event.date %>
+    <br><br>
+      <% if is_admin? %>
+        <%= link_to 'Edit', edit_event_path(@event), :class => "btn btn-primary btn-lg", :style => "margin:10px;" %>
+      <% end %>
+        <%= link_to 'Back', events_path, :class => "btn btn-primary btn-lg" %>
+        </div>
+    <br><br>
+  </div>
 </div>

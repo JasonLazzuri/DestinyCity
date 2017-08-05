@@ -1,9 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+html{
+  position: relative;
+
+}
+
 body{
-  background-color: #212220;
-  min-width: 1000px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#no_style{
+  text-decoration: none;
 }
 
 
@@ -81,16 +94,6 @@ h1,h2,h3,h4,h5,p{
    1px  1px 5px #555;
 }
 
-// subscribe white section as well as the comic logo section
-.subscribe{
-  font-family: 'comics';
-  background-color: white;
-  min-height: 400px;
-  min-width: 1000px;
-  padding-top: 80px;
-  font-size: 50px;
-}
-// end
 .parallax1 {
   background-attachment: fixed;
   background-position: center;
@@ -119,26 +122,53 @@ h1,h2,h3,h4,h5,p{
   width: 100%;
 }
 
+.darken{
+  background-color: rgba(70, 72, 82, 0.1);
+}
+
+
 // comic icon logo section
-.marvel{
-  position: relative;
-  top:90px;
-  left: 30px;
-  width: 200px;
+
+.subscribe{
+  background-color: white;
 }
-.image{
-  position: relative;
-  padding: 30px;
-  width: 200px;
+
+@media screen and (max-width: 480px) {
+    .dc{
+      width: 60px;
+      margin: 10px;
+    }
+    .marvel,.vertigo{
+      width: 60px;
+      margin: 10px;
+
+    }
+    .image-comics,.darkhorse{
+      height: 100px;
+    }
 }
-.dc{
-  left: 80px;
-  width: 200px;
-  margin: 50px;
-}
-.darkhorse{
-  width: 200px;
-  padding:40px;
+
+
+@media screen and (min-width: 480px) {
+  .marvel{
+    position: relative;
+    top:90px;
+    left: 30px;
+    max-width: 200px;
+  }
+  .image-comics{
+    padding: 40px;
+    width: 200px;
+  }
+  .dc{
+    left: 80px;
+    max-width: 200px;
+    margin: 45px;
+  }
+  .darkhorse{
+    max-width: 200px;
+    padding:40px;
+  }
 }
 // end
 
@@ -258,3 +288,29 @@ h5 {
       text-align: center;
   }
 }
+.card-img-top:hover{
+   position: relative;
+   transition: all .5s;
+   transform: scale(.9);
+
+   top: -5px;
+ }
+
+.spacer1{
+  height: 200px;
+}
+.spacer2{
+  height: 100px;
+}
+
+// footer
+.spacer {
+  height: 400px;
+}
+footer{
+  background-color:#212220;
+    bottom: 0px;
+    width: 100%;
+    position: relative;
+}
+// end footer
