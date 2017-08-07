@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     @order_items = current_order.order_items.new
     @product = Product.find(params[:id])
       respond_to do |format|
-      format.html { redirect_to :show}
+      format.html { redirect_to products_path}
       format.js
     end
   end

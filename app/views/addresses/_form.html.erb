@@ -1,0 +1,44 @@
+<%= form_for [@address], url: addresses_path, html: {multipart: true } do |form |%>
+  <% if address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :address_street, :placeholder => 'Street' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :address_city, :placeholder => 'City' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :address_state, :placeholder => 'State' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.number_field :zip, id: :address_zip, :placeholder => 'Zip Code' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :address_phone, :placeholder => 'Phone Number' %>
+  </div>
+
+  <%= form.hidden_field :account_id, value: @account %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :products
   resources :events
@@ -11,7 +12,9 @@ Rails.application.routes.draw do
   resources :order_items
   end
   resources :order_items
-  resources :charges
+  resources :addresses do
+    resources :charges
+  end
 
 
   root :to => 'welcome#index'

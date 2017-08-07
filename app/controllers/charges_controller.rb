@@ -1,11 +1,11 @@
 class ChargesController < ApplicationController
   def new
     @amount = current_order.total_price * 100
+    @address = Address.find(params[:address_id])
   end
 
   def create
     # Amount in cents
-    binding.pry
     @amount = (current_order.total_price * 100).to_i
 
     customer = Stripe::Customer.create(
@@ -25,5 +25,9 @@ class ChargesController < ApplicationController
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
+  end
+
+  def charges_params
+    params.require(:charges).permit(:address)
   end
 end

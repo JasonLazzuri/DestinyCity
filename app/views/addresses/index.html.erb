@@ -1,0 +1,31 @@
+<div class="events">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Addresses on File</h1>
+
+
+
+        <% @addresses.each do |address| %>
+        <ul>
+            <%= address.street %>
+            <%= address.city %>
+            <%= address.state %>
+            <%= address.zip %>
+
+            <%= link_to 'Ship to this Address', new_address_charge_path(address) %>
+            <br>
+
+            <%= link_to 'Show', address %>
+            <%= link_to 'Edit', edit_address_path(address) %>
+            <%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </ul>
+        <% end %>
+
+    <br>
+    <br>
+
+    <%= link_to 'New Address', new_address_path %>
+    <div class="spacer" style="height:500px;"></div>
+  </div>
+</div>
