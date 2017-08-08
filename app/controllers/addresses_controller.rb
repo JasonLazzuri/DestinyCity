@@ -15,7 +15,6 @@ class AddressesController < ApplicationController
   # GET /addresses/new
   def new
     @address = Address.new
-    @account = (Account.find_by(user_id: current_user.id)).id
   end
 
   # GET /addresses/1/edit

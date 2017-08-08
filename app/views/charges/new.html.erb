@@ -25,7 +25,10 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Safe And Secure"
             data-amount="<%= @amount %>"
-            data-locale="auto"></script>
+            data-locale="auto"
+            data-billingAddress="true"
+            data-shippingAddress="true">
+            </script>
   <% end %>
 </div>
   <div class="spacer" style="height:510px;"></div>

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :products
   resources :events
   resource :cart, only: [:show]
+  resource :account, only: [:show]
+
 
   resources :users, only: [:index]
 
