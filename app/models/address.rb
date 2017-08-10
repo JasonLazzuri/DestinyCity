@@ -1,3 +1,4 @@
 class Address < ApplicationRecord
-  belongs_to :account
+  has_one :account
+  has_many :orders
 end

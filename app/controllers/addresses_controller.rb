@@ -1,10 +1,8 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
 
-  # GET /addresses
-  # GET /addresses.json
   def index
-    @addresses = Address.all
+    @addresses = Address.where(account_id: current_user.account.id).all
   end
 
   # GET /addresses/1

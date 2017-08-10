@@ -5,6 +5,14 @@
     <div class="well">
       <h2>Order number :<%= order.id %></h2>
       <h4>Status: <%= order.status %> | Date: <%= order.created_at%></h4>
+
+      <h3>Ship To:</h3>
+      <p> <%= Address.find(order.address_id).street %> </p>
+      <p> <%= Address.find(order.address_id).city %> </p>
+      <p> <%= Address.find(order.address_id).state %> </p>
+      <p> <%= Address.find(order.address_id).phone %> </p>
+
+      <h3>Order Items:</h3>
       <% order.order_items.each do |item| %>
         <h4><%= item.product.title %> </h4>
         <p ><%= image_tag item.product.images[0].image.url(:thumb) %></p>
