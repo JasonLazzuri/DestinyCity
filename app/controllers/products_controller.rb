@@ -5,8 +5,7 @@ class ProductsController < ApplicationController
     redirect_to new_user_session_path unless current_user && current_user.admin
   end
 
-  # GET /products
-  # GET /products.json
+
   def index
     if current_order.status == "Paid"
       session[:order_id] = nil
@@ -16,8 +15,6 @@ class ProductsController < ApplicationController
 
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     @order = current_order
     @order_items = current_order.order_items.new
@@ -28,17 +25,14 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/new
   def new
     @product = Product.new
   end
 
-  # GET /products/1/edit
   def edit
   end
 
-  # POST /products
-  # POST /products.json
+
   def create
     @product = Product.new(product_params)
     respond_to do |format|
@@ -57,8 +51,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1
-  # PATCH/PUT /products/1.json
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -71,8 +63,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
   def destroy
     @product.destroy
     respond_to do |format|

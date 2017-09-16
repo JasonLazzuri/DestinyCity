@@ -7,8 +7,6 @@ html{
 
 }
 
-
-
 body{
   margin: 0;
   display: flex;
@@ -44,8 +42,6 @@ h1,h2,h3,h4,h5,p{
   font-size: 20px;
   background-color: #0C7FC4;
   width: 100%;
-  border-bottom: solid 10px white;
-  z-index: 2;
 }
 #navbar1 > ul > li > a,#navbar1 > ul > li:nth-child(6){
     color: #fff;
@@ -377,3 +373,8 @@ footer{
     position: relative;
 }
 // end footer
+
+
+.stars{
+  width: 100px;
+}

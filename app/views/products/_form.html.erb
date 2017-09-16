@@ -2,9 +2,14 @@
     <%= form_for [@product], url: products_path, html: { multipart: true } do |form| %>
 
       <div class="form-group">
-        <%= form.label :title %>
+        <%= "When given the choice, I prefer to be given a task list to run with." %>
         <%= form.text_field :title, :class => "form-control", id: :product_title %>
       </div>
+
+      <%= radio_button_tag(:remoteOneValue, "child") %>
+      <%= label_tag(:age_child, "I am younger than 21") %>
+      <%= radio_button_tag(:age, "adult") %>
+      <%= label_tag(:age_adult, "I'm over 21") %>
 
       <div class="form-group">
         <%= form.label :description %>
