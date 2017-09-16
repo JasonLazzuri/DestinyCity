@@ -4,9 +4,7 @@
     <p id="notice"><%= notice %></p>
     <br>
     <h1 style="text-align:center;">Events</h1>
-
-
-
+    
   <ul>
     <% @events.each do |event| %>
           <%= image_tag event.images.url(:large) %>

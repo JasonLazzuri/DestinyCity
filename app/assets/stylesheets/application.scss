@@ -94,7 +94,6 @@ h1,h2,h3,h4,h5,p{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 700px;
   width: 100%;
 }
 
@@ -394,7 +393,7 @@ footer{
 }
 
 
-// below 819px
+// devices max width 768px
 @media screen and(max-width: 768px){
   .img-responsive img{
       max-width: 50%;
@@ -424,7 +423,12 @@ footer{
 .row{
   margin-right: 0px;
 }
-@media only screen and(max-width: 414px){
+
+
+
+// final
+// devices max width 414px, iPhone 5,5S
+@media only screen and(max-width: 360px){
 
   #cover{
     top: 0px;
@@ -520,6 +524,14 @@ footer{
     text-align: center;
     font-size: 30px;
   }
+  body > div > div > div.title-bar > h1{
+    font-size: 20px;
+  }
+
+  body > div > div > div.container > img{
+    width: 250px;
+  }
+
   h2{
     text-align: center;
     font-size: 15px;
