@@ -346,89 +346,411 @@ footer{
 
 
 
-@media screen and (max-width: 1024px) {
-  .heading{
+// iPad Pro 1024px
+@media only screen and(max-width: 1024px){
+
+  #cover{
+    top: 0px;
+    filter:blur(2px);
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+   #heading2{
+     text-shadow:
+      8px  8px     #fff,
+     -1px  1px     #fff,
+      1px -1px     #fff,
+     -1px -1px     #fff,
+      1px  1px 5px #555;
+     top: -240px;
+     padding-left: 120px;
+     position: inherit;
+     font-size: 70px;
+     color: #0C7FC4;
+     font-family: 'comics';
+     z-index: 2;
+  }
+
+  #heading1{
     text-shadow:
      8px  8px     #fff,
     -1px  1px     #fff,
      1px -1px     #fff,
     -1px -1px     #fff,
      1px  1px 5px #555;
-    top: 200px;
-    padding-left: 100px;
+    top: -350px;
+    padding-left: 80px;
     position: absolute;
-    font-size: 140px;
+    font-size: 115px;
     color: #0C7FC4;
     font-family: 'comics';
     z-index: 2;
   }
-
-  blockquote{
-    font-size: 12px;
+  img{
+      width: 40px;
+    }
+  button{
+    margin-left: 255px;
+    margin-top: 10px;
   }
 
-  .spacer2{
-    height: 100px;
+  h3{
+    font-size: 30px;
   }
 
-  .marvel{
-    position: relative;
-    top:90px;
-    left: 30px;
-    max-width: 180px;
-  }
-  .image-comics{
-    padding: 40px;
-    width: 180px;
-  }
-  .dc{
-    left: 80px;
-    max-width: 180px;
-    margin: 45px;
-  }
-  .darkhorse{
-    max-width: 180px;
-    padding:40px;
-  }
-}
-
-
-// devices max width 768px
-@media screen and(max-width: 768px){
   .img-responsive img{
       max-width: 50%;
   }
   .img-responsive{
       text-align: center;
   }
-  blockquote{
-    font-size: 10px;
+  blockquote, h6{
+    font-size: 17px;
   }
-  .spacer2{
-    height: 100px;
-  }
-  .dc{
-    width: 60px;
-    margin: 10px;
-  }
-  .marvel,.vertigo{
-    width: 60px;
-    margin: 10px;
 
+  .spacer2{
+    height: 10px;
   }
-  .image-comics,.darkhorse{
-    height: 100px;
+
+  .dc{
+    width: 100px;
+    margin-top: 75px;
+    margin-left: 60px;
   }
+  .marvel{
+    margin: 5px;
+    margin-left: -10px;
+    width: 150px
+  }
+  .vertigo{
+    width: 150px;
+    margin: 5px;
+    margin-top: 55px;
+    margin-left: 19px;
+  }
+  .image-comics, .darkhorse{
+      height: 230px;
+      width: 180px;
+      margin-left: 10px;
+  }
+
+  .darkhorse{
+    margin-left: -35px;
+  }
+
+// events
+  h1{
+    text-align: center;
+    font-size: 55px;
+  }
+  body > div > div > div.title-bar > h1{
+    font-size: 20px;
+  }
+
+  body > div > div > div.container > img{
+    width: 250px;
+  }
+
+  .logo{
+    padding-top: 50px;
+    padding-left: 20px;
+    width: 200px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 25px;
+  }
+  h4{
+    text-align: center;
+    font-size: 25px;
+  }
+  .icon{
+    width: 80px;
+  }
+  .social-media-bar{
+    height:120px;
+  }
+  .row{
+    margin-right: 0px;
+  }
+
 }
-.row{
-  margin-right: 0px;
+
+
+// iPad 768px
+@media only screen and(max-width: 768px){
+
+  #cover{
+    top: 0px;
+    filter:blur(2px);
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+   #heading2{
+     text-shadow:
+      8px  8px     #fff,
+     -1px  1px     #fff,
+      1px -1px     #fff,
+     -1px -1px     #fff,
+      1px  1px 5px #555;
+     top: -240px;
+     padding-left: 90px;
+     position: inherit;
+     font-size: 50px;
+     color: #0C7FC4;
+     font-family: 'comics';
+     z-index: 2;
+  }
+
+  #heading1{
+    text-shadow:
+     8px  8px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+    top: -350px;
+    padding-left: 50px;
+    position: absolute;
+    font-size: 90px;
+    color: #0C7FC4;
+    font-family: 'comics';
+    z-index: 2;
+  }
+  img{
+      width: 40px;
+    }
+  button{
+    margin-left: 185px;
+    margin-top: 10px;
+  }
+
+  h3{
+    font-size: 30px;
+  }
+
+  .img-responsive img{
+      max-width: 50%;
+  }
+  .img-responsive{
+      text-align: center;
+  }
+  blockquote, h6{
+    font-size: 17px;
+  }
+
+  .spacer2{
+    height: 10px;
+  }
+
+  .dc{
+    width: 120px;
+    margin-top: 60px;
+    margin-left: 69px;
+  }
+  .marvel{
+    margin: 5px;
+    margin-left: 10px;
+    width: 150px;
+    margin-top: 80px;
+  }
+  .vertigo{
+    width: 150px;
+    margin: 5px;
+    margin-top: 55px;
+    margin-left: 19px;
+  }
+  .image-comics, .darkhorse{
+      height: 150px;
+      width: 100px;
+      margin-left: 70px;
+      margin-top: 30px;
+  }
+
+  .darkhorse{
+    margin-left: 20px;
+  }
+
+// events
+  h1{
+    text-align: center;
+    font-size: 45px;
+  }
+  body > div > div > div.title-bar > h1{
+    font-size: 20px;
+  }
+
+  body > div > div > div.container > img{
+    width: 250px;
+  }
+
+  .logo{
+    padding-top: 50px;
+    padding-left: 20px;
+    width: 200px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 25px;
+  }
+  h4{
+    text-align: center;
+    font-size: 25px;
+  }
+  .icon{
+    width: 80px;
+  }
+  .social-media-bar{
+    height:120px;
+  }
+  .row{
+    margin-right: 0px;
+  }
+
 }
+
+
+
+// iPhone 6+ 414px
+@media only screen and(max-width: 414px){
+
+  #cover{
+    top: 0px;
+    filter:blur(2px);
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+   #heading2{
+     text-shadow:
+      8px  8px     #fff,
+     -1px  1px     #fff,
+      1px -1px     #fff,
+     -1px -1px     #fff,
+      1px  1px 5px #555;
+     top: -200px;
+     padding-left: 30px;
+     position: inherit;
+     font-size: 30px;
+     color: #0C7FC4;
+     font-family: 'comics';
+     z-index: 2;
+  }
+
+  #heading1{
+    text-shadow:
+     8px  8px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+    top: -350px;
+    padding-left: 4px;
+    position: absolute;
+    font-size: 65px;
+    color: #0C7FC4;
+    font-family: 'comics';
+    z-index: 2;
+  }
+  img{
+      width: 40px;
+    }
+  button{
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  .img-responsive img{
+      max-width: 50%;
+  }
+  .img-responsive{
+      text-align: center;
+  }
+  blockquote, h6{
+    font-size: 8px;
+  }
+
+  .spacer2{
+    height: 10px;
+  }
+
+  .dc{
+    width: 50px;
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+  .marvel{
+    margin: 5px;
+    margin-top: 45px;
+    width: 55px;
+  }
+  .vertigo{
+    width: 50px;
+    margin: 5px;
+    margin-top: 35px;
+    margin-left: 19px;
+  }
+  .image-comics, .darkhorse{
+      height: 70px;
+      width: 40px;
+      margin-left: 20px;
+      margin-top: 15px;
+  }
+
+  .darkhorse{
+    margin-left: 15px;
+  }
+
+  #sign{
+    font-size: 20px;
+  }
+
+// events
+  h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  body > div > div > div.title-bar > h1{
+    font-size: 20px;
+  }
+
+  body > div > div > div.container > img{
+    width: 250px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 15px;
+  }
+  h4{
+    text-align: center;
+  }
+  .icon{
+    width: 80px;
+  }
+  .social-media-bar{
+    height:120px;
+  }
+  .row{
+    margin-right: 0px;
+  }
+
+}
+
 
 
 
 // final
 // devices max width 414px, iPhone 5,5S
-@media only screen and(max-width: 360px){
+@media only screen and(max-width: 320px){
 
   #cover{
     top: 0px;
@@ -472,7 +794,7 @@ footer{
       width: 40px;
     }
   button{
-    margin-left: 90px;
+    margin-left: 45px;
     margin-top: 10px;
   }
 
@@ -496,33 +818,35 @@ footer{
 
   .dc{
     width: 50px;
-    margin-top: 55px;
-    margin-left: 40px;
+    margin-top: 35px;
+    margin-left: 30px;
   }
   .marvel{
     margin: 5px;
-    margin-top: -20px;
-    margin-left: -10px;
+    margin-top: 45px;
+    width: 55px;
   }
   .vertigo{
     width: 50px;
     margin: 5px;
-    margin-top: 55px;
+    margin-top: 35px;
     margin-left: 19px;
   }
   .image-comics, .darkhorse{
-      height: 150px;
-      width: 120px;
+      height: 70px;
+      width: 40px;
+      margin-left: 20px;
+      margin-top: 15px;
   }
 
   .darkhorse{
-    margin-left: -15px;
+    margin-left: 15px;
   }
 
 // events
   h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
   }
   body > div > div > div.title-bar > h1{
     font-size: 20px;
