@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
 
 
   def index
+    @number = rand(1..15)
     @events = Event.all
   end
 

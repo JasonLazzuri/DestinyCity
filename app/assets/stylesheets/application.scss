@@ -1,10 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 body{
   margin: 0px;
   flex-direction: column;
   min-height: 100vh;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 
@@ -144,52 +149,65 @@ h1,h2,h3,h4,h5,p{
     max-width: 200px;
     padding:40px;
   }
-
 }
 
-@media screen and (min-width: 820px) {
-    .heading{
-    text-shadow:
-     8px  8px     #fff,
-    -1px  1px     #fff,
-     1px -1px     #fff,
-    -1px -1px     #fff,
-     1px  1px 5px #555;
-    top: 200px;
-    padding-left: 100px;
-    position: absolute;
-    font-size: 80px;
-    color: #0C7FC4;
-    font-family: 'comics';
-    z-index: 2;
-  }
-  .spacer2{
-    height: 100px;
-  }
-  .marvel{
-    position: relative;
-    top:90px;
-    left: 30px;
-    width: 200px;
-  }
-  .image-comics{
-    padding: 40px;
-    width: 200px;
-  }
-  .dc{
-    left: 80px;
-    width: 200px;
-    margin: 45px;
-  }
-  .darkhorse{
-    max-width: 200px;
-    padding:40px;
-  }
+.center{
+  text-align: center;
+  font-size: 50px;
+}
+
+#heading1{
+  text-shadow:
+   8px  8px     #fff,
+  -1px  1px     #fff,
+   1px -1px     #fff,
+  -1px -1px     #fff,
+   1px  1px 5px #555;
+  top: -370px;
+  font-size: 1000%;
+  position: absolute;
+  color: #0C7FC4;
+  font-family: 'comics';
+  z-index: 2;
+}
+
+#heading2{
+   text-shadow:
+    8px  8px     #fff,
+   -1px  1px     #fff,
+    1px -1px     #fff,
+   -1px -1px     #fff,
+    1px  1px 5px #555;
+   top: -230px;
+   padding-left: 40px;
+   position: inherit;
+   font-size: 500%;
+   color: #0C7FC4;
+   font-family: 'comics';
+   z-index: 2;
 }
 
 
 
-// end
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
 
 // event section
 #events{
@@ -238,6 +256,10 @@ h1,h2,h3,h4,h5,p{
   height: 80px;
   padding-top: 5px ;
 }
+
+
+
+
 
 // products page
 .images{
@@ -330,6 +352,43 @@ footer{
 }
 
 
+// boxes
+#boxes {
+  background: grey;
+  padding: 2rem 0 6.5rem 0;
+  position: relative;
+  .service{
+    background: white;
+    width: 31%;
+    height: 10%;
+    float: left;
+    margin: -5rem 1% 0 1%;
+    padding: 3rem 2.5%;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+    box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+  }
+}
+.button-wrapper{
+  text-align: center;
+  margin: 3rem 0;
+}
+.button{
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: .5rem 3rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: #054C7A;
+}
+
+
+
 
 
 
@@ -356,17 +415,17 @@ footer{
     width: 100%;
     height: 400px;
   }
-   #heading2{
+  #heading2{
      text-shadow:
       8px  8px     #fff,
      -1px  1px     #fff,
       1px -1px     #fff,
      -1px -1px     #fff,
       1px  1px 5px #555;
-     top: -240px;
-     padding-left: 120px;
+     top: -125px;
+     padding-left: 70px;
      position: inherit;
-     font-size: 70px;
+     font-size: 40px;
      color: #0C7FC4;
      font-family: 'comics';
      z-index: 2;
@@ -379,10 +438,9 @@ footer{
      1px -1px     #fff,
     -1px -1px     #fff,
      1px  1px 5px #555;
-    top: -350px;
-    padding-left: 80px;
+    top: -240px;
     position: absolute;
-    font-size: 115px;
+    font-size: 80px;
     color: #0C7FC4;
     font-family: 'comics';
     z-index: 2;
@@ -480,7 +538,7 @@ footer{
 
 
 // iPad 768px
-@media only screen and(max-width: 768px){
+@media only screen and (max-width: 768px) and (min-width: 414px){
 
   #cover{
     top: 0px;
@@ -496,13 +554,12 @@ footer{
       1px -1px     #fff,
      -1px -1px     #fff,
       1px  1px 5px #555;
-     top: -240px;
-     padding-left: 90px;
+     top: -180px;
+     padding-left: 70px;
      position: inherit;
-     font-size: 50px;
+     font-size: 30px;
      color: #0C7FC4;
      font-family: 'comics';
-     z-index: 2;
   }
 
   #heading1{
@@ -512,13 +569,11 @@ footer{
      1px -1px     #fff,
     -1px -1px     #fff,
      1px  1px 5px #555;
-    top: -350px;
-    padding-left: 50px;
-    position: absolute;
-    font-size: 90px;
+    top: -280px;
+    padding-left: 0px;
+    font-size: 65px;
     color: #0C7FC4;
     font-family: 'comics';
-    z-index: 2;
   }
   img{
       width: 40px;
@@ -632,7 +687,7 @@ footer{
       1px -1px     #fff,
      -1px -1px     #fff,
       1px  1px 5px #555;
-     top: -200px;
+     top: -120px;
      padding-left: 30px;
      position: inherit;
      font-size: 30px;
@@ -648,7 +703,7 @@ footer{
      1px -1px     #fff,
     -1px -1px     #fff,
      1px  1px 5px #555;
-    top: -350px;
+    top: -280px;
     padding-left: 4px;
     position: absolute;
     font-size: 65px;
@@ -745,12 +800,8 @@ footer{
 
 }
 
-
-
-
-// final
-// devices max width 414px, iPhone 5,5S
-@media only screen and(max-width: 320px){
+// devices max width 375px, iPhone 6
+@media only screen and(max-width: 375px){
 
   #cover{
     top: 0px;
@@ -766,10 +817,10 @@ footer{
       1px -1px     #fff,
      -1px -1px     #fff,
       1px  1px 5px #555;
-     top: -215px;
-     padding-left: 30px;
+     top: -140px;
+     padding-left: 20px;
      position: inherit;
-     font-size: 25px;
+     font-size: 23px;
      color: #0C7FC4;
      font-family: 'comics';
      z-index: 2;
@@ -782,7 +833,7 @@ footer{
      1px -1px     #fff,
     -1px -1px     #fff,
      1px  1px 5px #555;
-    top: -350px;
+    top: -280px;
     padding-left: 4px;
     position: absolute;
     font-size: 50px;
@@ -872,5 +923,211 @@ footer{
   .row{
     margin-right: 0px;
   }
+  .button-wrapper{
+    text-align: center;
+    margin: 0;
+  }
+  .button{
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: #054C7A;
+  }
+  #boxes {
+    background: grey;
+    padding: 2rem 0 6.5rem 0;
+    position: relative;
+    .service{
+      background: white;
+      width: 30%;
+      float: left;
+      margin: -5rem 1% 0 1%;
+      padding: 3rem 2.5%;
+      text-align: center;
+      position: relative;
+      -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      h3{
+        font-size: 15px;
+      }
+      p{
+        font-size: 12px;
+        font-family: helvetica;
+      }
+    }
+  }
+}
 
+
+
+
+// final
+// devices max width 414px, iPhone 5,5S
+@media only screen and(max-width: 320px){
+
+  #cover{
+    top: 0px;
+    filter:blur(2px);
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+   #heading2{
+     text-shadow:
+      8px  8px     #fff,
+     -1px  1px     #fff,
+      1px -1px     #fff,
+     -1px -1px     #fff,
+      1px  1px 5px #555;
+     top: -120px;
+     padding-left: 2px;
+     position: inherit;
+     font-size: 23px;
+     color: #0C7FC4;
+     font-family: 'comics';
+     z-index: 2;
+  }
+
+  #heading1{
+    text-shadow:
+     8px  8px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+    top: -250px;
+    padding-left: 4px;
+    position: absolute;
+    font-size: 50px;
+    color: #0C7FC4;
+    font-family: 'comics';
+    z-index: 2;
+  }
+  img{
+      width: 40px;
+    }
+  button{
+    margin-left: 45px;
+    margin-top: 10px;
+  }
+
+  h3{
+    font-size: 20px;
+  }
+
+  .img-responsive img{
+      max-width: 50%;
+  }
+  .img-responsive{
+      text-align: center;
+  }
+  blockquote, h6{
+    font-size: 8px;
+  }
+
+  .spacer2{
+    height: 10px;
+  }
+
+  .dc{
+    width: 50px;
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+  .marvel{
+    margin: 5px;
+    margin-top: 45px;
+    width: 55px;
+  }
+  .vertigo{
+    width: 50px;
+    margin: 5px;
+    margin-top: 35px;
+    margin-left: 19px;
+  }
+  .image-comics, .darkhorse{
+      height: 70px;
+      width: 40px;
+      margin-left: 20px;
+      margin-top: 15px;
+  }
+
+  .darkhorse{
+    margin-left: 15px;
+  }
+
+// events
+  h1{
+    text-align: center;
+    font-size: 35px;
+  }
+  body > div > div > div.title-bar > h1{
+    font-size: 20px;
+  }
+
+  body > div > div > div.container > img{
+    width: 250px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 15px;
+  }
+  h4{
+    text-align: center;
+  }
+  .icon{
+    width: 80px;
+  }
+  .social-media-bar{
+    height:120px;
+  }
+  .row{
+    margin-right: 0px;
+  }
+  .button-wrapper{
+    text-align: center;
+    margin: 0;
+  }
+  .button{
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: #054C7A;
+  }
+  #boxes {
+    background: grey;
+    padding: 2rem 0 6.5rem 0;
+    position: relative;
+    .service{
+      background: white;
+      width: 30%;
+      float: left;
+      margin: -5rem 1% 0 1%;
+      padding: 3rem 2.5%;
+      text-align: center;
+      position: relative;
+      -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+      h3{
+        font-size: 15px;
+      }
+      p{
+        font-size: 12px;
+        font-family: helvetica;
+      }
+    }
+  }
 }
