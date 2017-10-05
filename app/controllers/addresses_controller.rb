@@ -29,7 +29,6 @@ class AddressesController < ApplicationController
         format.json { render :show, status: :created, location: @address }
       else
         format.html { render :new }
-        binding.pry
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
