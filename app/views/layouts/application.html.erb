@@ -6,6 +6,18 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBN8m4iJ3LtZhl97zm5MjlDrOH_0RuGxE&callback=initMap">
     </script>
+
+    <script>
+     $(function() {
+     $.getJSON("//extreme-ip-lookup.com/json/",
+      function(json) {
+       if (json.country && json.city) {
+        $('#ipLookup').html('Location of '+json.query+': '+json.city+', '+json.country+'');
+       }
+      }
+     );
+     });
+    </script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -90,6 +102,8 @@
             Phone: (253) 234-7112 <br>
             <a href="mailto:mikefitz@destinycitycomics.com?12">Email: mikefitz@destinycitycomics.com</a> <br>
              </p>
+            <%= binding.pry %>
+            <%= @remoteip %>
         </div>
        </div>
      </div>
